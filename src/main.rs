@@ -1,4 +1,4 @@
-use std::str::FromStr;
+use std::{str::FromStr, fs::File};
 
 use color_eyre::Report;
 use tracing::info;
@@ -9,7 +9,9 @@ use aoc2022::*;
 fn main() -> Result<(), Report> {
     setup_tracing()?;
     info!("Starting AOC 2022!");
-    
+    info!("Checking one...");
+    info!("Answer to one_1 is {}", one::first(File::open("one.txt")?)?);
+    info!("Answer to one_2 is {}", one::second(File::open("one.txt")?)?);
     Ok(())
 }
 
