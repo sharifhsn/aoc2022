@@ -14,7 +14,7 @@ pub fn first(mut file: File) -> color_eyre::Result<u32> {
             biggest = total;
         }
     }
-    
+
     Ok(biggest)
 }
 

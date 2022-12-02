@@ -1,4 +1,4 @@
-use std::{str::FromStr, fs::File};
+use std::{fs::File, str::FromStr};
 
 use color_eyre::Report;
 use tracing::info;
@@ -11,7 +11,12 @@ fn main() -> Result<(), Report> {
     info!("Starting AOC 2022!");
     info!("Checking one...");
     info!("Answer to one_1 is {}", one::first(File::open("one.txt")?)?);
-    info!("Answer to one_2 is {}", one::second(File::open("one.txt")?)?);
+    info!(
+        "Answer to one_2 is {}",
+        one::second(File::open("one.txt")?)?
+    );
+    info!("Answer to two_1 is {}", two::first(File::open("two.txt")?)?);
+    info!("Answer to two_2 is {}", two::second(File::open("two.txt")?)?);
     Ok(())
 }
 
