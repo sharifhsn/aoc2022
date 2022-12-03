@@ -17,6 +17,8 @@ fn main() -> Result<(), Report> {
     );
     info!("Answer to two_1 is {}", two::first(File::open("two.txt")?)?);
     info!("Answer to two_2 is {}", two::second(File::open("two.txt")?)?);
+    info!("Answer to three_1 is {}", three::first(File::open("three.txt")?)?);
+    info!("Answer to three_2 is {}", three::second(File::open("three.txt")?)?);
     Ok(())
 }
 
